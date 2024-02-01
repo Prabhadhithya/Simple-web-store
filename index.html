@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Store</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+</head>
+<body>
+    <header>
+        <h1>Your Store</h1>
+    </header>
+
+    <section id="about-us">
+        <h2>About Us</h2>
+        <p>Welcome to Your Saree Store,  destination for exquisite sarees. We are passionate about bringing you the finest collection of sarees that blend tradition with contemporary styles. Our commitment is to provide you with quality fabrics, vibrant colors, and unique designs that make every saree a piece of art.</p>
+        <p>The smoothness, look the class—all without breaking the bank. Upgrade your style game with these comfy and affordable stunners. Get ready to stay effortlessly!</p>
+    </section>
+
+    <!-- Work Proof Section -->
+    <section id="work-proof">
+        <h2>Direct from Weavers</h2>
+        <div class="proof-images">
+            <img src="loomimg1.jpg" alt="Work Proof 1">
+            <img src="loomimg2.jpg" alt="Work Proof 2">
+            <img src="loomimg3.jpg" alt="Work Proof 3">
+        </div>
+    </section>
+
+    <section>
+        <div class="product" data-instock="true">
+            <img src="IMG6.jpg" alt="Saree 1">
+            <h2>Saree Title 1</h2>
+            <p>Description of the saree. Include details about fabric, color, and design.</p>
+            <p>Price: 2499.00</p>
+            <button onclick="openModal(['IMG6.jpg', 'IMG2.jpg', 'IMG3.jpg', 'IMG4.jpg', 'IMG1.jpg'])">View</button>
+            <button onclick="addToCart()">Buy Now</button>
+        </div>
+
+        <div class="product" data-instock="true">
+            <img src="saree2.jpg" alt="Saree 2">
+            <h2>Saree Title 2</h2>
+            <p>Description of the saree. Include details about fabric, color, and design.</p>
+            <p>Price: 00.00</p>
+            <button onclick="openModal(['saree2.jpg', 'saree2_2.jpg', 'saree2_3.jpg', 'saree2_4.jpg', 'saree2_5.jpg', 'saree2_6.jpg'])">View</button>
+            <button onclick="addToCart()">Buy Now</button>
+        </div>
+    </section>
+
+    <!-- Modal with Swiper container -->
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <div class="swiper-container">
+                <div class="swiper-wrapper" id="swiperWrapper"></div>
+                <!-- Add navigation buttons -->
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Reviews Section -->
+    <section id="reviews">
+        <h2>Customer Reviews</h2>
+        <div id="review-form">
+            <h3>Leave a Review</h3>
+            <form id="commentForm">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="comment">Comment:</label>
+                <textarea id="comment" name="comment" rows="4" required></textarea>
+
+                <button type="button" onclick="submitReview()">Submit Review</button>
+            </form>
+        </div>
+        <div id="comments">
+            <!-- Display customer comments here -->
+        </div>
+    </section>
+
+    <script src="index.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+
+
+    <footer>
+        <!--<button onclick="clearReviews()">Clear All Reviews</button>-->
+        &copy; 2024 Your Store. All rights reserved.
+    </footer>
+</body>
+</html>
